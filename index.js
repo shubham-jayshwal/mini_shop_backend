@@ -28,6 +28,9 @@ const ProductSchema =new mongoose.Schema ({
 const ProductModel=mongoose.model('product',ProductSchema)
 
 //APIs
+app.get('/',async(req, res)=>{
+    res.send("this is working")
+})
 app.get('/products',async(req, res)=>{
     const products =await ProductModel.find()
     res.json(products)
