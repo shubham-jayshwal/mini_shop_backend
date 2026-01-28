@@ -12,7 +12,7 @@ app.use(express.json())
 
 //mongoDb Connection
 const connectDb =async()=>{
-    await mongoose.connect("mongodb://localhost:27017/minishop")
+    await mongoose.connect(process.env.MONGO_URL)
     console.log("Database connected successfully!!!")
 }
 connectDb()
