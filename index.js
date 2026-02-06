@@ -12,7 +12,7 @@ app.use(express.json())
 
 //mongoDb Connection
 const connectDb =async()=>{
-    await mongoose.connect(process.env.MONGO_URL)
+    await mongoose.connect(process.env.MONGO_URI)
     console.log("Database connected successfully!!!")
 }
 connectDb()
